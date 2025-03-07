@@ -12,17 +12,57 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header>
-      <div class="flex items-center">
-        <img src="assets/logo.png" alt="" />
-        <h2>DevBoard</h2>
+  <body class="h-[100vh] w-[90%] mx-auto">
+    <header class="mt-5 flex justify-between bg-slate-100 p-5 rounded-xl">
+      <div class="flex items-center gap-2">
+        <img class="w-10" src="assets/logo.png" alt="" />
+        <h2 class="text-3xl font-semibold">DevBoard</h2>
       </div>
-      <div>
-        <img src="assets/checkbox.png" alt="" />
-        <h2>28</h2>
+      <div class="flex items-center gap-7">
+        <div class="flex items-center gap-2">
+          <img class="w-6" src="assets/checkbox.png" alt="" />
+          <h2 class="text-2xl font-semibold">28</h2>
+        </div>
         <img src="assets/theme-btn.png" alt="" />
       </div>
     </header>
+    <main class="grid grid-cols-4 gap-5 mt-5">
+      <div class="col-span-3 p-5 bg-slate-100 rounded-xl">
+        <!-- task assigned -->
+        <div class="grid grid-cols-4 gap-5">
+          <div
+            class="flex items-center gap-3 bg-gray-200 px-3 py-2 rounded-xl col-span-1"
+          >
+            <img class="w-6" src="assets/checkbox.png" alt="" />
+            <div>
+              <h2 class="text-gray-600">Task Assigned</h2>
+              <p class="text-xl font-semibold">05</p>
+            </div>
+          </div>
+          <div class="col-span-2 bg-blue-400 rounded-xl px-3 py-2">
+            <div class="flex items-center gap-3">
+              <img class="w-16" src="assets/board.png" alt="" />
+              <h2 class="font-semibold text-slate-50">
+                Discover something <br />new Today!
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 bg-gray-200 px-3 py-2 rounded-xl col-span-1"
+          >
+            <img class="w-6" src="assets/calender.png" alt="" />
+            <div>
+              <h2 id="month" class="text-gray-600">july 28</h2>
+              <p id="year" class="text-xl font-semibold">05</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-1 p-5 bg-slate-100 rounded-xl">
+        <h1>World</h1>
+      </div>
+    </main>
+    <script src="index.js"></script>
   </body>
 </html>
