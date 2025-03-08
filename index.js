@@ -26,7 +26,6 @@ document.getElementById("discover").addEventListener("click", function () {
 
 let totalComplete = 0;
 
-// Loop through all "Completed" buttons (with class 'btn' or specific classes)
 const completeButtons = document.querySelectorAll(".btn");
 
 completeButtons.forEach((btn) => {
