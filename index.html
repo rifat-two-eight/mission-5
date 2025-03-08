@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-[100%]" lang="en">
+<html class="h-full" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="h-[100%] pt-14">
+  <body class="h-full pt-14">
     <header
       class="w-[90%] mx-auto flex justify-between bg-slate-100 p-5 rounded-xl"
     >
@@ -23,7 +23,7 @@
       <div class="flex items-center gap-7">
         <div class="flex items-center gap-2">
           <img class="w-6" src="assets/checkbox.png" alt="" />
-          <h2 class="text-2xl font-semibold">28</h2>
+          <h2 id="totalTask" class="text-2xl font-semibold">28</h2>
         </div>
         <img id="color-change" src="assets/theme-btn.png" alt="" />
       </div>
@@ -38,7 +38,7 @@
             <img class="w-6" src="assets/checkbox.png" alt="" />
             <div>
               <h2 class="text-gray-600">Task Assigned</h2>
-              <p class="text-xl font-semibold">05</p>
+              <p id="task" class="text-xl font-semibold">6</p>
             </div>
           </div>
           <div
@@ -65,10 +65,12 @@
         </div>
         <!-- card item -->
         <div class="grid grid-cols-3 gap-10 mt-8 justify-items-center">
-          <div class="card bg-base-100 w-96 shadow-sm">
+          <div class="card bg-base-100 w-full shadow-sm">
             <div class="card-body">
               <p class="card-title">ShopEase</p>
-              <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+              <h1 id="heading-text-1" class="text-2xl font-semibold">
+                Fix Mobile Button Issue
+              </h1>
               <p class="bg-slate-100 p-2 rounded-xl my-2">
                 Debug using Chrome, Firefox, Brave, check for over for
                 overlab...
@@ -78,14 +80,18 @@
                   <h3 class="text-xl">Deadline</h3>
                   <h2>21 March 2028</h2>
                 </div>
-                <button class="btn bg-sky-500 text-white">Completed</button>
+                <button class="btn completed-1 bg-sky-500 text-white">
+                  Completed
+                </button>
               </div>
             </div>
           </div>
-          <div class="card bg-base-100 w-96 shadow-sm">
+          <div class="card bg-base-100 w-full shadow-sm">
             <div class="card-body">
               <p class="card-title">CloudSync</p>
-              <h1 class="text-2xl font-semibold">Add Dark Mode</h1>
+              <h1 id="heading-text-2" class="text-2xl font-semibold">
+                Add Dark Mode
+              </h1>
               <p class="bg-slate-100 p-2 rounded-xl my-2">
                 Debug using Chrome, Firefox, Brave, check for over for
                 overlab...
@@ -95,11 +101,13 @@
                   <h3 class="text-xl">Deadline</h3>
                   <h2>21 March 2028</h2>
                 </div>
-                <button class="btn bg-sky-500 text-white">Completed</button>
+                <button id="completed2" class="btn bg-sky-500 text-white">
+                  Completed
+                </button>
               </div>
             </div>
           </div>
-          <div class="card bg-base-100 w-96 shadow-sm">
+          <div class="card bg-base-100 w-full shadow-sm">
             <div class="card-body">
               <p class="card-title">SwiftPay</p>
               <h1 class="text-2xl font-semibold">Optimize Home Page</h1>
@@ -116,7 +124,7 @@
               </div>
             </div>
           </div>
-          <div class="card bg-base-100 w-96 shadow-sm">
+          <div class="card bg-base-100 w-full shadow-sm">
             <div class="card-body">
               <p class="card-title">Meta</p>
               <h1 class="text-2xl font-semibold">Add New Emoji</h1>
@@ -133,7 +141,7 @@
               </div>
             </div>
           </div>
-          <div class="card bg-base-100 w-96 shadow-sm">
+          <div class="card bg-base-100 w-full shadow-sm">
             <div class="card-body">
               <p class="card-title">Google LLC</p>
               <h1 class="text-2xl font-semibold">Integrate OpenAI API</h1>
@@ -150,7 +158,7 @@
               </div>
             </div>
           </div>
-          <div class="card bg-base-100 w-96 shadow-sm">
+          <div class="card bg-base-100 w-full shadow-sm">
             <div class="card-body">
               <p class="card-title">Glassdoor</p>
               <h1 class="text-2xl font-semibold">Improve Job Searching</h1>
@@ -175,10 +183,12 @@
           <h2 class="text-xl font-semibold">Activity Log</h2>
         </div>
         <button
-          class="btn bg-blue-500 text-white flex justify-self-center mt-4"
+          id="clear-history"
+          class="bg-blue-500 px-4 py-2 rounded-md font-semibold text-white flex justify-self-center mt-4"
         >
           Clear History
         </button>
+        <div id="activity"></div>
       </div>
     </main>
     <script src="index.js"></script>
