@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-[100%]" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculate</title>
     <!-- tailwind+daisyui -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -12,8 +12,10 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="h-[100vh] w-[90%] mx-auto">
-    <header class="mt-5 flex justify-between bg-slate-100 p-5 rounded-xl">
+  <body class="h-[100%] pt-14">
+    <header
+      class="w-[90%] mx-auto flex justify-between bg-slate-100 p-5 rounded-xl"
+    >
       <div class="flex items-center gap-2">
         <img class="w-10" src="assets/logo.png" alt="" />
         <h2 class="text-3xl font-semibold">DevBoard</h2>
@@ -23,10 +25,10 @@
           <img class="w-6" src="assets/checkbox.png" alt="" />
           <h2 class="text-2xl font-semibold">28</h2>
         </div>
-        <img src="assets/theme-btn.png" alt="" />
+        <img id="color-change" src="assets/theme-btn.png" alt="" />
       </div>
     </header>
-    <main class="grid grid-cols-4 gap-5 mt-5">
+    <main class="w-[90%] mx-auto grid grid-cols-4 gap-5 mt-5">
       <div class="col-span-3 p-5 bg-slate-100 rounded-xl">
         <!-- task assigned -->
         <div class="grid grid-cols-4 gap-5">
@@ -39,7 +41,10 @@
               <p class="text-xl font-semibold">05</p>
             </div>
           </div>
-          <div class="col-span-2 bg-blue-400 rounded-xl px-3 py-2">
+          <div
+            id="discover"
+            class="col-span-2 bg-blue-400 rounded-xl px-3 py-2"
+          >
             <div class="flex items-center gap-3">
               <img class="w-16" src="assets/board.png" alt="" />
               <h2 class="font-semibold text-slate-50">
@@ -58,9 +63,122 @@
             </div>
           </div>
         </div>
+        <!-- card item -->
+        <div class="grid grid-cols-3 gap-10 mt-8 justify-items-center">
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <p class="card-title">ShopEase</p>
+              <h1 class="text-2xl font-semibold">Fix Mobile Button Issue</h1>
+              <p class="bg-slate-100 p-2 rounded-xl my-2">
+                Debug using Chrome, Firefox, Brave, check for over for
+                overlab...
+              </p>
+              <div class="card-actions flex justify-between">
+                <div>
+                  <h3 class="text-xl">Deadline</h3>
+                  <h2>21 March 2028</h2>
+                </div>
+                <button class="btn bg-sky-500 text-white">Completed</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <p class="card-title">CloudSync</p>
+              <h1 class="text-2xl font-semibold">Add Dark Mode</h1>
+              <p class="bg-slate-100 p-2 rounded-xl my-2">
+                Debug using Chrome, Firefox, Brave, check for over for
+                overlab...
+              </p>
+              <div class="card-actions flex justify-between">
+                <div>
+                  <h3 class="text-xl">Deadline</h3>
+                  <h2>21 March 2028</h2>
+                </div>
+                <button class="btn bg-sky-500 text-white">Completed</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <p class="card-title">SwiftPay</p>
+              <h1 class="text-2xl font-semibold">Optimize Home Page</h1>
+              <p class="bg-slate-100 p-2 rounded-xl my-2">
+                Debug using Chrome, Firefox, Brave, check for over for
+                overlab...
+              </p>
+              <div class="card-actions flex justify-between">
+                <div>
+                  <h3 class="text-xl">Deadline</h3>
+                  <h2>21 March 2028</h2>
+                </div>
+                <button class="btn bg-sky-500 text-white">Completed</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <p class="card-title">Meta</p>
+              <h1 class="text-2xl font-semibold">Add New Emoji</h1>
+              <p class="bg-slate-100 p-2 rounded-xl my-2">
+                Debug using Chrome, Firefox, Brave, check for over for
+                overlab...
+              </p>
+              <div class="card-actions flex justify-between">
+                <div>
+                  <h3 class="text-xl">Deadline</h3>
+                  <h2>21 March 2028</h2>
+                </div>
+                <button class="btn bg-sky-500 text-white">Completed</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <p class="card-title">Google LLC</p>
+              <h1 class="text-2xl font-semibold">Integrate OpenAI API</h1>
+              <p class="bg-slate-100 p-2 rounded-xl my-2">
+                Debug using Chrome, Firefox, Brave, check for over for
+                overlab...
+              </p>
+              <div class="card-actions flex justify-between">
+                <div>
+                  <h3 class="text-xl">Deadline</h3>
+                  <h2>21 March 2028</h2>
+                </div>
+                <button class="btn bg-sky-500 text-white">Completed</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card-body">
+              <p class="card-title">Glassdoor</p>
+              <h1 class="text-2xl font-semibold">Improve Job Searching</h1>
+              <p class="bg-slate-100 p-2 rounded-xl my-2">
+                Debug using Chrome, Firefox, Brave, check for over for
+                overlab...
+              </p>
+              <div class="card-actions flex justify-between">
+                <div>
+                  <h3 class="text-xl">Deadline</h3>
+                  <h2>21 March 2028</h2>
+                </div>
+                <button class="btn bg-sky-500 text-white">Completed</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-span-1 p-5 bg-slate-100 rounded-xl">
-        <h1>World</h1>
+        <div class="flex justify-center items-center gap-3 mt-3">
+          <img src="assets/activity.png" alt="" />
+          <h2 class="text-xl font-semibold">Activity Log</h2>
+        </div>
+        <button
+          class="btn bg-blue-500 text-white flex justify-self-center mt-4"
+        >
+          Clear History
+        </button>
       </div>
     </main>
     <script src="index.js"></script>
